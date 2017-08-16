@@ -1,0 +1,38 @@
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(70, 70, 70);
+  line-height: 30px;
+}
+
+.main-heading,
+.main-slider-heading,
+.service-info-heading,
+.about-heading,
+.contacts-heading {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  line-height: normal;
+}
+
+.filters-heading,
+.sorting-heading {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  line-height: normal;
+}
+
+.item-heading {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  line-height: normal;
+}
+
+
