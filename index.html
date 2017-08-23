@@ -16,7 +16,8 @@
           </a>
           <form action="https://echo.htmlacademy.ru" method="post" class="main-header-search">
             <label for="main-search" class="visually-hidden">Поиск по сайту</label>
-            <input type="search" name="search" id="main-search" placeholder="Поиск по сайту">
+            <input type="search" name="search" id="main-search" class="search-field" placeholder="Поиск по сайту">
+            <input name="submit" type="submit" value="Найти">
           </form>
           <ul class="user-header-navigation">
             <li class="login-link"><a href="#">Войти</a></li>
@@ -24,17 +25,17 @@
             <li class="cart"><a href="#">Корзина</a></li>
           </ul>
           <ul class="site-navigation">
-            <li><a href="catalog.html">Каталог товаров</a>
-              <ul>
+            <li class="opened"><a href="catalog.html">Каталог товаров</a>
+              <ul class="sub-menu">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн-камеры</a></li>
               </ul>
-              <ul>
+              <ul class="sub-menu">
                 <li><a href="#">Фитнес-браслеты</a></li>
                 <li><a href="#">Умные часы</a></li>
               </ul>
-              <ul>
+              <ul class="sub-menu">
                 <li><a href="#">Квадрокоптеры</a></li>
               </ul>
             </li>
@@ -53,7 +54,7 @@
           <section class="main-slide">
             <img src="img/slider-1.png" width="384" height="486" alt="selfy-stick">
             <h2 class="visually-hidden">Палка для сэлфи</h2>
-            <b class="main-slider-heading">Делай селфи, как Бен Стиллер!</b>
+            <b>Делай селфи, как Бен Стиллер!</b>
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a href="#" class="main-slider-btn btn">Подробнее</a>
             <table class="main-slider-info">
@@ -103,22 +104,22 @@
           </section>
           <ul class="main-slider-nav">
             <li class="main-slider-control">
-              <label for="first-slide">Первый слайд</label>
+              <label for="first-slide" class="visually-hidden">Первый слайд</label>
               <input type="radio" name="slide" id="first-slide" checked>
             </li>
             <li class="main-slider-control">
-              <label for="second-slide">Второй слайд</label>
+              <label for="second-slide" class="visually-hidden">Второй слайд</label>
               <input type="radio" name="slide" id="second-slide">
             </li>
             <li class="main-slider-control">
-              <label for="third-slide">Третий слайд</label>
+              <label for="third-slide" class="visually-hidden">Третий слайд</label>
               <input type="radio" name="slide" id="third-slide">
             </li>
           </ul>
         </section>
         <section class="popular-services">
           <h2 class="visually-hidden">Популярные категории товаров</h2>
-          <ul>
+          <ul class="popular-service-list">
             <li class="popular-service-item virtual-reality">
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -142,35 +143,35 @@
         <section class="service-info">
           <h2 class="visually-hidden">Информация об оказании услуг магазином</h2>
           <ul class="service-info-tabs">
-            <li class="service-info-tab">
+            <li>
               <label for="delivery" class="services-btn btn">Доставка</label>
-              <input type="radio" name="service-info" id="delivery" checked>
+              <input type="radio" name="service-info" id="delivery" class="visually-hidden" checked>
             </li>
-            <li for="warranty" class="service-info-tab">
-              <label class="services-btn btn">Гарантия</label>
-              <input type="radio" name="service-info" id="warranty">
+            <li>
+              <label class="services-btn btn" for="warranty">Гарантия</label>
+              <input type="radio" name="service-info" id="warranty" class="visually-hidden">
             </li>
-            <li class="service-info-tab">
+            <li>
               <label for="credit" class="services-btn btn">Кредит</label>
-              <input type="radio" name="service-info" id="credit">
+              <input type="radio" name="service-info" id="credit" class="visually-hidden">
             </li>
           </ul>
-          <section class="service-info-delivery">
-            <h2 class="service-info-heading">Доставка</h2>
+          <section class="service-info service-info-delivery">
+            <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </section>
-          <section class="service-info-warranty">
-            <h2 class="service-info-heading">Гарантия</h2>
+          <section class="service-info service-info-warranty">
+            <h2>Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br> Товар, не дом, конечно же.</p>
           </section>
-          <section class="service-info-credit">
-            <h2 class="service-info-heading">Кредит</h2>
+          <section class="service-info service-info-credit">
+            <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
           </section>
         </section>
         <section class="main-brands">
           <h2 class="visually-hidden">Бренды</h2>
-          <ul>
+          <ul class="main-brands-list">
             <li class="main-brand">
               <a href="#"><img src="img/brand-logo-1.png" width="260px" height="100px" alt="DJI"></a>
             </li>
@@ -186,7 +187,7 @@
           </ul>
         </section>
         <section class="about">
-          <h2 class="about-heading">О нас</h2>
+          <h2>О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul>
@@ -197,36 +198,42 @@
           <a href="#" class="btn about-btn">Подробнее о нас</a>
         </section>
         <section class="contacts">
-          <h2 class=" contacts-heading">Контакты</h2>
+          <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img src="img/map.jpg" width="560" height="222" alt="map">
           <button class="btn contacts-btn">Напишите нам</button>
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <a class="footer-logo">
-          <img src="img/logo.png" width="164" height="36" alt="logo" >
-        </a>
-        <ul class="footer-user-navigation">
-          <li class="login-link"><a href="#">Войти</a></li>
-          <li class="compare"><a href="#">Сравнить</a></li>
-          <li class="cart"><a href="#">Корзина</a></li>
-        </ul>
-        <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
-        <ul class="footer-navigation">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="footer-telephone">Тел.: +7 (495) 495-95-95</p>
-        <ul class="footer-social">
-          <li><a class="social-button facebook" href="#">Facebook</a></li>
-          <li><a class="social-button instagram" href="#">Instagram</a></li>
-          <li><a class="social-button twitter" href="#">Twitter</a></li>
-        </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLAcademy</a>
+        <div class="first-footer-line">
+          <a class="footer-logo">
+            <img src="img/logo.png" width="164" height="36" alt="logo" >
+          </a>
+          <ul class="footer-user-navigation">
+            <li class="login-link"><a href="#">Войти</a></li>
+            <li class="compare"><a href="#">Сравнить</a></li>
+            <li class="cart"><a href="#">Корзина</a></li>
+          </ul>
+        </div>
+        <div class="second-footer-line">
+          <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-navigation">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="footer-telephone">Тел.: +7 (495) 495-95-95</p>
+        </div>
+        <dib class="third-footer-line">
+          <ul class="footer-social">
+            <li><a class="social-button facebook" href="#">Facebook</a></li>
+            <li><a class="social-button instagram" href="#">Instagram</a></li>
+            <li><a class="social-button twitter" href="#">Twitter</a></li>
+          </ul>
+          <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLAcademy</a>
+        </dib>
       </div>
     </footer>
 
@@ -236,7 +243,7 @@
           <label for="name">Ваше имя:</label>
           <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
           <label for="e-mail">Ваш e-mail:</label>
-          <input type="text" id="e-mail" name="e-mail" placeholder="Для отправки ответа">
+          <input type="e-mail" id="e-mail" name="e-mail" placeholder="Для отправки ответа">
         </p>
         <p class="visually-hidden">Тело письма:</p>
         <p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="в свободной форме"></textarea></p>
