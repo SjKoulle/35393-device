@@ -296,11 +296,25 @@ a {
 
 .main-brands a:link {
     opacity: 0.2;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: grayscale(1); /* Firefox 4+ */
+    filter: gray; /* IE 6-9 */
 }
 
 .main-brands a:hover,
 .main-brands a:focus {
     opacity: 1;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: grayscale(); /* Firefox 4+ */
+    filter: none; /* IE 6-9 */
 }
 
 .about h2,
