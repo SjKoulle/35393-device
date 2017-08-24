@@ -241,12 +241,14 @@
       <form class="write-us-form" action="#" method="post">
         <p>
           <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
           <label for="e-mail">Ваш e-mail:</label>
+        </p>
+        <p>
+          <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
           <input type="email" id="e-mail" name="e-mail" placeholder="Для отправки ответа">
         </p>
-        <p class="visually-hidden">Тело письма:</p>
-        <p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="в свободной форме"></textarea></p>
+        <p class="label">Текст письма:</p>
+        <p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="В свободной форме"></textarea></p>
         <button class="btn" type="submit">Отправить</button>
       </form>
       <button class="modal-close">Закрыть</button>
