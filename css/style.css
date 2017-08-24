@@ -397,8 +397,8 @@ a {
     color: rgb(0, 0, 0);
 }
 
-.write-us-form input[type='text'],
-.write-us-form input[type='email'],
+.write-us-form input[type='text']:valid,
+.write-us-form input[type='email']:valid,
 .write-us-form textarea {
     box-sizing: border-box;
     width: 358px;
@@ -417,14 +417,14 @@ a {
     padding-top: 15px;
 }
 
-.write-us-form input[type='text']:hover,
-.write-us-form input[type='email']:hover,
+.write-us-form input[type='text']:valid:hover,
+.write-us-form input[type='email']:valid:hover,
 .write-us-form textarea:hover {
     background-color: rgba(230, 230, 230, 0.8);
 }
 
-.write-us-form input[type='text']:focus,
-.write-us-form input[type='email']:focus,
+.write-us-form input[type='text']:valid:focus,
+.write-us-form input[type='email']:valid:focus,
 .write-us-form textarea:focus {
     padding-left: 7px;
 
@@ -440,7 +440,12 @@ a {
 }
 
 .write-us-form input[type='email']:invalid {
+    box-sizing: border-box;
+    width: 358px;
+    height: 51px;
+    padding-left: 10px;
     color: rgba(70, 70, 70, 0.4);
+    outline: none;
     border: none;
     background-color: rgba(237, 181, 181, 1);
 }
