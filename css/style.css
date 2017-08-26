@@ -30,7 +30,7 @@ a {
 }
 
 .container {
-    width: 1160px;
+    width: 1164px;
     margin: 0 auto;
 }
 
@@ -73,7 +73,7 @@ a {
   height: 100%;
 }
 
-.btn:active::before {
+.btn:active::before{
   top: 0%;
   height: 100%;
 }
@@ -92,26 +92,6 @@ a {
     border: 0;
 }
 
-.main-header {
-    position:relative;
-    background-color: rgba(240, 197, 46, 0.5);
-    margin: 0;
-    margin-top: 40px;
-    padding-top: 33px;
-    padding-left: 59px;
-    padding-right: 59px;
-    padding-bottom: 0;
-    min-height: 299px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header-logo {
-    position: absolute;
-    left: 59px;
-    top: -19px;
-}
-
 .header-logo img:hover,
 .header-logo img:focus {
     opacity: 0.6;
@@ -119,12 +99,6 @@ a {
 
 .header-logo img:active {
     opacity: 0.3;
-}
-
-.main-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 
@@ -135,39 +109,12 @@ a {
     width: 356px;
     min-height: 49px;
     margin: 0;
-    margin-right: 165px;
-    margin-bottom: 31px;
     padding: 0;
-    padding-left: 38px;
 
     opacity: 0.3;
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
-
-.main-header-search input[type='search']::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.main-header-search input[type='search']::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}/* Firefox 19+ */
-
-.main-header-search input[type='search']:-moz-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}/* Firefox 18- */
-
-.main-header-search input[type='search']:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-/*.main-header-search input[type="search"]::before {
-    content: "";
-    position: absolute;
-    background-image: url('../img/search.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}*/
 
 .main-header-search input[type='search']:hover {
     opacity: 0.6;
@@ -184,19 +131,18 @@ a {
     display: none;
 
     min-height: 49px;
+    margin-left: -4px;
 
     color: #000000;
     border: 2px solid #000000;
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 33px;
-    left: 415px;
 }
 
 .search-field + input[type='submit']:active,
 .search-field:focus + input[type='submit'] {
     display: inline-block;
 
+    margin-left: -4px;
     padding: 10px 20px;
 
     vertical-align: bottom;
@@ -216,40 +162,13 @@ a {
     background-color: #000000;
 }
 
-.user-header-navigation {
-    display: flex;
-    justify-content: space-between;
-    width: 521px;
-    background-color: red;
-    padding: 0;
-    padding-top: 16px;
-    margin: 0;
-    list-style: none;
-}
-
 .user-header-navigation li {
-
-    padding: 0;
-    padding-right: 2px;
-    margin: 0;
-    width: 90px;
-    text-align: right;
-    background-color: green;
-
-}
-
-.user-header-navigation li:first-of-type {
-    /*float: left;*/
-}
-
-.user-header-navigation li:last-of-type {
-    margin-right: 0;
+    list-style: none;
 }
 
 .user-header-navigation a {
     color: #000000;
 }
-
 .user-header-navigation a:hover,
 .user-header-navigation a:focus {
     opacity: 0.6;
@@ -263,30 +182,17 @@ a {
     opacity: 0.3;
 }
 
-.site-navigation {
+.site-navigation li {
     list-style: none;
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-}
-
-.site-navigation>li {
-    display: inline-block;
-    position: relative;
-}
-
-.site-navigation>li:first-of-type {
-    margin-right: 318px;
 }
 
 .site-navigation a {
-    display: inline;
     font-family: 'Gilroy', Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 22px;
 
-    letter-spacing: 3.6px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 
     color: rgb(0, 0, 0);
@@ -301,38 +207,10 @@ a {
     opacity: 0.3;
 }
 
-.site-navigation>li:hover .sub-menu-container {
-    display: block;
-}
-
-.sub-menu-container {
-    position: absolute;
-    z-index: 1;
-    display: none;
-    width: 1160px;
-}
-
-.sub-menu-container ul {
-    width: 240px;
-    margin: 0;
-    margin-top: 33px;
-    padding: 0;
-    white-space: nowrap;
-    list-style: none;
-    float: left;
-}
-
-.sub-menu-container li {
-    display: block;
-}
-
-
-.sub-menu-container a {
+.sub-menu a {
     font-size: 15px;
     font-weight: 300;
     line-height: 36px;
-    text-transform: none;
-    letter-spacing: 0;
 }
 
 .main-slide b {
