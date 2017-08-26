@@ -94,15 +94,15 @@ a {
 
 .main-header {
     position:relative;
-    background-color: rgba(240, 197, 46, 0.5);
+    background-color: rgb(247, 226, 150);
     margin: 0;
     margin-top: 40px;
     padding-top: 33px;
-    padding-left: 59px;
-    padding-right: 59px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-bottom: 0;
-    min-height: 299px;
-    width: 100%;
+    min-height: 186px;
+    width: 1040px;
     box-sizing: border-box;
 }
 
@@ -265,7 +265,7 @@ a {
     opacity: 0.3;
 }
 
-.user-header-navigation>.logout-link{
+.user-header-navigation>.logout-link {
     opacity: 0.3;
     text-align: left;
     padding-left: 0;
@@ -318,6 +318,7 @@ a {
     z-index: 1;
     display: none;
     width: 1042px;
+    background-color: rgb(247, 226, 150);
 }
 
 .sub-menu-container ul {
