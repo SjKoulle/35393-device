@@ -129,7 +129,7 @@ a {
 }
 
 .main-navigation-index {
-    padding-bottom: 164px;
+    padding-bottom: 160px;
 }
 
 .header-logo {
@@ -194,8 +194,6 @@ a {
 
     background-image: url(../img/search.svg);
     background-repeat: no-repeat;
-    /*z-index: 1;*/
-    /*opacity: 1;*/
 }
 
 .main-header-search input[type='search']:hover {
@@ -230,6 +228,11 @@ a {
     vertical-align: top;
 
     color: #000000;
+    border: 2px solid #000000;
+}
+
+.search-field:focus + input[type='submit'],
+.search-field + input[type='submit']:active {
     border: 2px solid #000000;
 }
 
@@ -332,6 +335,7 @@ a {
 
 .site-navigation > li {
     display: inline-block;
+    font-size: 0;
 
     margin: 0;
     margin-right: 33px;
@@ -678,11 +682,12 @@ a {
     top: -19px;
 
     width: 1160px;
-    margin-bottom: 163px;
+    margin-bottom: 165px;
 }
 
 .popular-service-list {
     display: flex;
+    flex-wrap: wrap;
 
     width: 1160px;
     margin: 0;
@@ -711,57 +716,78 @@ a {
     color: #000000;
 }
 
-.popular-service-list a:active {
+.popular-service-item {
+    display: relative;
+}
+
+.popular-service-item:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.popular-service-item .service-img:hover,
-.popular-service-item a:hover+.service-img {
+.popular-service-item:hover .service-img {
     background-color: rgba(240, 197, 46, 1);
 }
 
-.popular-service-list .service-img:active + {
-    background-color: rgba(240, 197, 46, 1);
-}
-
-.popular-service-list .service-img {
+.service-img {
+    position: relative;
     width: 160px;
     height: 160px;
     margin-bottom: 34px;
+    vertical-align: center;
 
     background-color: #f7e296;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.virtual-reality .service-img {
+.service-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.popular-service-item:active .service-img::after {
+    opacity: 0.3;
+}
+
+.virtual-reality .service-img::after {
     background-image: url(../img/popular-1.svg);
     background-position: left 31px bottom 53px;
 }
 
-.sellfy-stick .service-img {
+.sellfy-stick .service-img::after {
     background-image: url(../img/popular-2.svg);
     background-position: center bottom 2px;
 }
 
-.action-camera .service-img {
+.action-camera .service-img::after {
     background-image: url(../img/popular-3.svg);
     background-position: left 49px bottom 35px;
 }
 
-.fitness-bracelet .service-img {
+.fitness-bracelet .service-img::after {
     background-image: url(../img/popular-4.svg);
 }
 
-.clever-watch .service-img {
+.clever-watch .service-img::after {
     background-image: url(../img/popular-5.svg);
 }
 
-.quadrupter .service-img {
+.quadrupter .service-img::after {
     background-image: url(../img/popular-6.svg);
 }
 
+.service-info-controls {
+    display: none;
+}
+
 .service-info {
+    position: relative;
     width: 100%;
     min-height: 288px;
     margin-bottom: 94px;
@@ -770,8 +796,7 @@ a {
 }
 
 .service-info .container {
-    position: relative;
-
+    widows: 1160px;
     display: flex;
     flex-direction: row;
 
@@ -779,25 +804,32 @@ a {
 }
 
 .service-info-tabs {
+    position: relative;
     width: 280px;
     margin: 0;
-    margin-top: 45px;
     margin-right: 120px;
     padding: 0;
 
     list-style: none;
 }
 
+.service-info-tabs::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -4px;
+    width: 7px;
+    height: 319px;
+    background-color: #000;
+}
+
 .service-info-tabs li {
     min-height: 40px;
     margin-bottom: 25px;
     padding-right: 120px;
-}
-
-.service-info-tabs li:first-of-type {
-    position: absolute;
+    position: relative;
     top: -20px;
-    left: 0;
+    left: 0px;
 }
 
 .service-info-tabs label {
@@ -808,9 +840,25 @@ a {
     width: 150px;
 }
 
-.service-info-tabs label:active {
+#delivery:checked ~ .service-info #service-info-delivery,
+#warranty:checked ~.service-info #service-info-warranty,
+#credit:checked ~.service-info #service-info-credit {
+    display: block;
+}
+
+#delivery:checked ~ .service-info label[for=delivery],
+#warranty:checked ~.service-info label[for=warranty],
+#credit:checked ~.service-info label[for=credit] {
     color: #f7e184;
-    background-color: #000000;
+}
+
+#delivery:checked ~ .service-info label[for=delivery]::before,
+#warranty:checked ~.service-info label[for=warranty]::before,
+#credit:checked ~.service-info label[for=credit]::before {
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #000;
 }
 
 .service-info-content {
@@ -820,10 +868,6 @@ a {
 
     width: 460px;
     padding-top: 38px;
-}
-
-.service-info .active-tab {
-    display: block;
 }
 
 .service-info h2 {
@@ -847,6 +891,39 @@ a {
     letter-spacing: 0.25px;
 }
 
+.service-info-delivery::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -298px;
+    background-image: url('../img/delivery.svg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.service-info-warranty::after {
+    content: "";
+    position: absolute;
+    top: -39px;
+    right: -283px;
+    background-image: url('../img/warranty.svg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.service-info-credit::after {
+    content: "";
+    position: absolute;
+    top: -39px;
+    right: -274px;
+    background-image: url('../img/credit.svg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
 .main-brands ul {
     display: flex;
 
@@ -860,30 +937,78 @@ a {
     justify-content: space-between;
 }
 
-
-.main-brands a:link {
-    opacity: 0.2;
-
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-            filter: grayscale(100%);
-            filter: grayscale(1); /* Firefox 4+ */
-            filter: gray; /* IE 6-9 */
+.main-brand a {
+    position: relative;
+    display: block;
 }
 
-.main-brands a:hover,
-.main-brands a:focus {
-    opacity: 1;
+.main-brand img {
+    width: 260px;
+    height: 100px;
+}
 
-    -webkit-filter: grayscale(0%);
-       -moz-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
-         -o-filter: grayscale(0%);
-            filter: grayscale(0%);
-            filter: grayscale(); /* Firefox 4+ */
-            filter: none; /* IE 6-9 */
+.main-brand .main-brand-dji::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 260px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url('../img/brand-logo-1-grey.jpg');
+}
+
+.main-brand .main-brand-dji:hover::before {
+    display: none;
+}
+
+.main-brand .main-brand-SP-Hadjets::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 260px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url('../img/brand-logo-2-grey.jpg');
+}
+
+.main-brand .main-brand-SP-Hadjets:hover::before {
+    display: none;
+}
+
+.main-brand .main-brand-GoPro::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 260px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url('../img/brand-logo-3-grey.jpg');
+}
+
+.main-brand .main-brand-GoPro:hover::before {
+    display: none;
+}
+
+.main-brand .main-brand-Vive::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 260px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url('../img/brand-logo-4-grey.jpg');
+}
+
+.main-brand .main-brand-Vive:hover::before {
+    display: none;
 }
 
 .main-two-columns {

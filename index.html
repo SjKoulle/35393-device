@@ -50,6 +50,9 @@
       <input class="main-slider-controls" type="radio" name="slide" id="first-slide" checked>
       <input class="main-slider-controls" type="radio" name="slide" id="second-slide">
       <input class="main-slider-controls" type="radio" name="slide" id="third-slide">
+      <input type="radio" name="service-info" id="delivery" class="service-info-controls" checked>
+      <input type="radio" name="service-info" id="warranty" class="service-info-controls">
+      <input type="radio" name="service-info" id="credit" class="service-info-controls">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
         <section class="container main-slider">
           <div class="main-slider-position">
@@ -133,23 +136,23 @@
         <section class="popular-services container">
           <h2 class="visually-hidden">Популярные категории товаров</h2>
           <ul class="popular-service-list">
-            <li class="popular-service-item">
-              <a class="virtual-reality" href="#"><div class="service-img"></div>Виртуальная реальность</a>
+            <li>
+              <a class="popular-service-item virtual-reality" href="#"><div class="service-img"></div>Виртуальная реальность</a>
             </li>
-            <li class="popular-service-item">
-              <a class="sellfy-stick" href="#"><div class="service-img"></div>Моноподы <nobr>для селфи</nobr></a>
+            <li>
+              <a class="popular-service-item sellfy-stick" href="#"><div class="service-img"></div>Моноподы <nobr>для селфи</nobr></a>
             </li>
-            <li class="popular-service-item">
-              <a  class="action-camera" href="#"><div class="service-img"></div>Экшн-камеры</a>
+            <li>
+              <a  class="popular-service-item action-camera" href="#"><div class="service-img"></div>Экшн-камеры</a>
             </li>
-            <li class="popular-service-item">
-              <a class="fitness-bracelet" href="#"><div class="service-img"></div>Фитнес-браслеты</a>
+            <li>
+              <a class="popular-service-item fitness-bracelet" href="#"><div class="service-img"></div>Фитнес-браслеты</a>
             </li>
-            <li class="popular-service-item">
-              <a class="clever-watch" href="#"><div class="service-img"></div>Умные часы</a>
+            <li>
+              <a class="popular-service-item clever-watch" href="#"><div class="service-img"></div>Умные часы</a>
             </li>
-            <li class="popular-service-item">
-              <a  class="quadrupter" href="#"><div class="service-img"></div>Квадрокоптеры</a>
+            <li>
+              <a  class="popular-service-item quadrupter" href="#"><div class="service-img"></div>Квадрокоптеры</a>
             </li>
           </ul>
         </section>
@@ -159,26 +162,23 @@
             <ul class="service-info-tabs">
               <li>
                 <label for="delivery" class="services-btn btn">Доставка</label>
-                <input type="radio" name="service-info" id="delivery" class="visually-hidden" checked>
               </li>
               <li>
                 <label class="services-btn btn" for="warranty">Гарантия</label>
-                <input type="radio" name="service-info" id="warranty" class="visually-hidden">
               </li>
               <li>
                 <label for="credit" class="services-btn btn">Кредит</label>
-                <input type="radio" name="service-info" id="credit" class="visually-hidden">
               </li>
             </ul>
-            <section class="service-info-content service-info-delivery active-tab">
+            <section class="service-info-content service-info-delivery" id="service-info-delivery">
               <h2>Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </section>
-            <section class="service-info-content service-info-warranty">
+            <section class="service-info-content service-info-warranty" id="service-info-warranty">
               <h2>Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br> Товар, не дом, конечно же.</p>
             </section>
-            <section class="service-info-content service-info-credit">
+            <section class="service-info-content service-info-credit" id="service-info-credit">
               <h2>Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </section>
@@ -188,16 +188,16 @@
           <h2 class="visually-hidden">Бренды</h2>
           <ul class="main-brands-list">
             <li class="main-brand">
-              <a href="#"><img src="img/brand-logo-1.png" width="260px" height="100px" alt="DJI"></a>
+              <a class="main-brand-dji" href="#"><img src="img/brand-logo-1.png" width="260" height="100" alt="DJI"></a>
             </li>
             <li class="main-brand">
-              <a href="#"><img src="img/brand-logo-2.png" width="260" height="100" alt="SP-Hadjets"></a>
+              <a class="main-brand-SP-Hadjets" href="#"><img src="img/brand-logo-2.png" width="260" height="100" alt="SP-Hadjets"></a>
             </li>
             <li class="main-brand">
-              <a href="#"><img src="img/brand-logo-3.png" width="260" height="100" alt="GoPro"></a>
+              <a class="main-brand-GoPro" href="#"><img src="img/brand-logo-3.png" width="260" height="100" alt="GoPro"></a>
             </li>
             <li class="main-brand">
-              <a href="#"><img src="img/brand-logo-4.png" width="260" height="100" alt="Vive"></a>
+              <a class="main-brand-Vive" href="#"><img src="img/brand-logo-4.png" width="260" height="100" alt="Vive"></a>
             </li>
           </ul>
         </section>
