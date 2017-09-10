@@ -1487,15 +1487,6 @@ input[type='radio'].visually-hidden {
     background-color: #ffffff;
 }
 
-.modal-show {
-    display: block;
-
-    -webkit-animation: bounce;
-            animation: bounce;
-    -webkit-animation-duration: 500ms;
-            animation-duration: 500ms;
-}
-
 .modal-close {
     font-size: 0;
 
@@ -1640,6 +1631,15 @@ input[type='radio'].visually-hidden {
 
 .modal-map iframe {
     border: 0;
+}
+
+.modal-show {
+    display: block;
+
+    -webkit-animation: bounce;
+            animation: bounce;
+    -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
 }
 
 .catalog-head-wrapper {
