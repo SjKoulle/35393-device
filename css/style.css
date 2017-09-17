@@ -1516,7 +1516,7 @@ input[type='radio'].visually-hidden {
     display: -ms-flexbox;
     display: flex;
 
-    padding-bottom: 55px;
+    padding-bottom: 77px;
 }
 
 .third-footer-line::before {
@@ -1779,7 +1779,8 @@ input[type='radio'].visually-hidden {
     padding-top: 12px;
 }
 
-.write-us-form input[type='email']:invalid {
+.write-us-form input[type='email']:invalid,
+.write-us-form input[type='text']:invalid {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 358px;
@@ -1790,7 +1791,7 @@ input[type='radio'].visually-hidden {
     color: rgba(70, 70, 70, 0.4);
     border: none;
     outline: none;
-    background-color: #f6dada;
+    background-color: rgba(237, 181, 181, 0.5);
 }
 .btn-send {
     width: 200px;
