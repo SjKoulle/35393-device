@@ -47,6 +47,56 @@
     }
 }
 
+@-webkit-keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 15px;
@@ -1779,14 +1829,18 @@ input[type='radio'].visually-hidden {
     padding-top: 12px;
 }
 
-.write-us-form input[type='email']:invalid,
-.write-us-form input[type='text']:invalid {
+.write-us-form input:invalid {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 358px;
     height: 51px;
     margin-top: 15px;
     padding-left: 10px;
+
+    -webkit-animation: shake;
+            animation: shake;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
 
     color: rgba(70, 70, 70, 0.4);
     border: none;
@@ -1804,7 +1858,7 @@ input[type='radio'].visually-hidden {
     height: 559px;
 
     background-color: #dbdbdb;
-    background-image: url('https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C360&z=15');
+    background-image: url('../img/map-big.jpg');
     -webkit-box-shadow: 0 10px 20px 0 rgba(4,6,6,0.2);
             box-shadow: 0 10px 20px 0 rgba(4,6,6,0.2);
 }
